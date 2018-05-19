@@ -1,0 +1,26 @@
+<h1>ProjectTask List</h1>
+<table class="table">
+    <td><a href='/projtask/createprojtask'>Create</a></td>
+  <tr>
+    <td>tid</td>
+    <td>assignedto</td>
+    <td>startdate</td>
+    <td>enddate</td>
+    <td>completion</td>
+    <td>userstoryid</td>
+    
+
+    <tr *ngFor="let p of pt">
+
+      <td>{{p.tid}}</td>
+      <td>{{p.assignedto}}</td>
+      <td>{{p.startdate}}</td>
+      <td>{{p.enddate}}</td>
+      <td>{{p.completion}}</td>
+      <td>{{p.userstoryid}}</td>
+      <td><a href='/projtask/editprojtask/{{p.tid }}'>Edit/</a>
+      <a href='/projtask/deleteprojtask/{{p.tid}}'>Delete</a></td>
+      
+    </tr>
+  
+</table>

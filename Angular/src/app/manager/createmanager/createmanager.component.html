@@ -1,0 +1,33 @@
+<h2>Create</h2>
+
+
+<form [formGroup]="FormData" (ngSubmit)="onClickSubmit(FormData.value)">  
+    <div class="form-horizontal"></div>
+        <h4>Manager</h4>
+        <hr />
+      
+        <div class="form-group">
+            <label class="control-label col-md-2">comment</label>
+            <div class="col-md-10">
+                <input type="text" formControlName="comment" class="control-label col-md-2"> 
+                <div *ngIf="FormData.controls.comment.errors && (FormData.controls.comment.dirty || FormData.controls.comment.touched)" class="alert-danger">
+                    <div *ngIf="FormData.controls.comment.errors.required">
+                    Comments Required
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">tid</label>
+            <div class="col-md-10">
+                <input type="text" formControlName="tid" class="control-label col-md-2"> 
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" [disabled]="!FormData.valid" />
+            </div>
+        </div>
+    </form>

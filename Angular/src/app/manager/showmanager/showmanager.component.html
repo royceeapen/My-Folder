@@ -1,0 +1,22 @@
+<h1>Manager comments</h1>
+<table class="table">
+  <td><a href='/manager/createmanager'>Create</a></td>   
+<tr>
+   
+  <td>mcid</td>
+  <td>comment</td>
+  <td>tid</td>
+  
+  <td>Actions</td>
+
+<tr *ngFor="let mg of manager">
+  <td>{{mg.mcid}}</td>
+  <td>{{mg.comment}}</td>
+  <td>{{mg.tid}}</td>
+  
+  <td><a href='/manager/editmanager/{{mg.mcid }}'>Edit/</a>
+  <a href='/manager/deletemanager/{{mg.mcid }}'>Delete</a></td>
+ 
+  
+</tr>
+</table>
